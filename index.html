@@ -12,7 +12,7 @@
     <div class="cal-con">
       <div type="text" class="output"></div>
       <div class="numbers">
-        <div class="box-item btn close" id="clear">C</div>
+        <div class="box-item close" id="clear">C</div>
         <div class="box-item btn divide" id="/">/</div>
         <div class="box-item btn times" id="*">*</div>
         <div class="box-item btn seven" id="7">7</div>
@@ -37,6 +37,7 @@
   <script>
     let display = document.querySelector('.output');
     let buttons = document.querySelectorAll('.btn');
+    let clear = document.getElementById('clear');
     // console.log(buttons[0].innerText)
     
     for(i = 0; i < buttons.length; i++){
@@ -45,6 +46,15 @@
     })
     }
 
+    let equal = document.getElementById("=");
+    equal.addEventListener('click', () =>{
+      display.innerText = eval(display.innerText)
+      
+    })
+    
+    clear.addEventListener('click', () =>{
+      display.innerText = "";
+    })
     
   </script>
 </body>
