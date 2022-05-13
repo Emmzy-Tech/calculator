@@ -10,27 +10,42 @@
 <body>
   <div class="container">
     <div class="cal-con">
-      <div class="output">5 + 5</div>
+      <div type="text" class="output"></div>
       <div class="numbers">
-        <div class="box-item close">C</div>
-        <div class="box-item divide">/</div>
-        <div class="box-item times">*</div>
-        <div class="box-item seven">7</div>
-        <div class="box-item eight">8</div>
-        <div class="box-item nine">9</div>
-        <div class="box-item minus">-</div>
-        <div class="box-item four">4</div>
-        <div class="box-item five">5</div>
-        <div class="box-item six">6</div>
-        <div class="box-item plus">+</div>
-        <div class="box-item three">3</div>
-        <div class="box-item two">2</div>
-        <div class="box-item one">1</div>
-        <div class="box-item zero">0</div>
-        <div class="box-item tzero">00</div>
-        <div class="box-item equal">=</div>
+        <div class="box-item btn close" id="clear">C</div>
+        <div class="box-item btn divide" id="/">/</div>
+        <div class="box-item btn times" id="*">*</div>
+        <div class="box-item btn seven" id="7">7</div>
+        <div class="box-item btn eight" id="8">8</div>
+        <div class="box-item btn nine" id="9">9</div>
+        <div class="box-item btn minus" id="-">-</div>
+        <div class="box-item btn four" id="4">4</div>
+        <div class="box-item btn five" id="5">5</div>
+        <div class="box-item btn six" id="6">6</div>
+        <div class="box-item btn plus" id="+">+</div>
+        <div class="box-item btn three" id="3">3</div>
+        <div class="box-item btn two" id="2">2</div>
+        <div class="box-item btn one" id="1">1</div>
+        <div class="box-item btn zero" id="0">0</div>
+        <div class="box-item btn tzero" id="00">00</div>
+        <div class="box-item equal" id="=">=</div>
       </div>  
     </div>
   </div>
+
+
+  <script>
+    let display = document.querySelector('.output');
+    let buttons = document.querySelectorAll('.btn');
+    // console.log(buttons[0].innerText)
+    
+    for(i = 0; i < buttons.length; i++){
+      buttons[i].addEventListener('click', function(){
+      display.innerText += this.id;
+    })
+    }
+
+    
+  </script>
 </body>
 </html>
