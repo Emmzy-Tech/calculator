@@ -11,16 +11,18 @@
   width: 100%;
   height: 100vh;
   background-color: var(--pcolor);
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  /* place-content: center; */
 }
 .container .cal-con{
   background-color: #fff;
-  width: 450px;
+  width: 90%;
+  max-width: 463px;
   height: 700px;
   display: grid;
   grid-template-rows: 25% 75%;
-  
+  margin: 0 auto;
 }
 .container .cal-con .output{
   background-color: #fff;
