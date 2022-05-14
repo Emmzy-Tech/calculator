@@ -10,9 +10,13 @@ let display = document.querySelector('.output');
     }
 
     let equal = document.getElementById("=");
-    equal.addEventListener('click', () =>{
-      display.innerText = eval(display.innerText)
-      
+    equal.addEventListener('click', function(){
+      try{
+        display.innerText = eval(display.innerText)
+      }
+      catch{
+        display.innerText = "Error!"
+      }
     })
     
     clear.addEventListener('click', () =>{
