@@ -10,22 +10,20 @@ let equation = document.querySelector('.equation');
           equation.innerText = "";
         }else if(this.innerHTML == "DEL"){
           display.innerText = display.innerText.slice(0,-1);
-        }else if(this.innerText == "="){
-          this.addEventListener('click', function(){
-            
-            try{ 
-              equation.innerText = display.innerText;
-              display.innerText = eval(display.innerText);
-            }
-            catch{
-              display.innerText = "Error!"
-            }
-          })
-        }
-        else{
+        }else{
           display.innerText += this.innerText;
         }
     })
     }
+    let equal = document.querySelector('.equal');
+    equal.addEventListener('click', function(){      
+      try{
+        equation.innerText = display.innerText;
+        display.innerText = eval(display.innerText);
+      }
+      catch{
+        display.innerText = "Error!"
+      }
+    })
     
     
